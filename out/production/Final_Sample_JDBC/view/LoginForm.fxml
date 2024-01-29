@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextLogin" prefHeight="642.0" prefWidth="1163.0" style="-fx-background-color: #16a085;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+    <children>
+        <Rectangle arcHeight="12.0" arcWidth="12.0" fill="WHITE" height="428.0" layoutX="524.0" layoutY="78.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="612.0" />
+        <JFXTextField fx:id="userNameContext" focusColor="BLACK" labelFloat="true" layoutX="645.0" layoutY="182.0" onAction="#goToPasswordOnAction" prefHeight="33.0" prefWidth="435.0" promptText="UserName" unFocusColor="BLACK">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXTextField>
+        <JFXPasswordField fx:id="passwordContext" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" layoutX="645.0" layoutY="314.0" prefHeight="33.0" prefWidth="435.0" promptText="Password" unFocusColor="BLACK">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXPasswordField>
+        <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="743.0" layoutY="397.0" onAction="#openDashBoardForm" prefHeight="41.0" prefWidth="184.0" style="-fx-background-color: #1abc9c; -fx-background-radius: 12;" text="LOGIN" textFill="WHITE">
+            <font>
+                <Font name="System Bold Italic" size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <ImageView fitHeight="44.0" fitWidth="49.0" layoutX="570.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/img/icons8-customer-64.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="570.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/img/icons8-password-100.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="544.0" fitWidth="461.0" layoutX="31.0" layoutY="49.0" pickOnBounds="true">
+            <image>
+                <Image url="@../assets/img/Logo.png" />
+            </image>
+        </ImageView>
+        <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="608.0" layoutY="549.0" prefHeight="44.0" prefWidth="445.0" style="-fx-background-radius: 12; -fx-background-color: #ecf0f1;" text="FORGOT PASSWORD ?" textFill="#248a64">
+            <font>
+                <Font name="Franklin Gothic Demi Cond" size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Label>
+    </children>
+</AnchorPane>
