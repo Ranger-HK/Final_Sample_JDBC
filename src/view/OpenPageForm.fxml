@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="contextId" prefHeight="708.0" prefWidth="1163.0" style="-fx-background-color: #bdc3c7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OpenPageFormController">
-    <children>
-        <ImageView fitHeight="708.0" fitWidth="1042.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../assets/img/img1.png" />
-            </image>
-        </ImageView>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8fcff" height="288.0" layoutX="944.0" stroke="BLACK" strokeType="INSIDE" width="220.0" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8fcff" height="288.0" layoutX="944.0" layoutY="420.0" stroke="BLACK" strokeType="INSIDE" width="220.0" />
-        <JFXButton buttonType="RAISED" layoutX="953.0" layoutY="304.0" onAction="#openLoginOnAction" prefHeight="100.0" prefWidth="204.0" style="-fx-background-color: #16a085; -fx-background-radius: 25;" text="START" textFill="WHITE">
-            <font>
-                <Font name="System Bold" size="36.0" />
-            </font>
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor>
-        </JFXButton>
-    </children>
-</AnchorPane>
+<StackPane fx:id="contextID" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="701.0" prefWidth="1204.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OpenPageFormController">
+   <children>
+      <BorderPane prefHeight="701.0" prefWidth="1204.0" />
+      <ImageView fitHeight="701.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../assets/img/img1.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" onAction="#openLoginOnAction" prefHeight="42.0" prefWidth="159.0" style="-fx-background-color: #16a085; -fx-background-radius: 10;" text="START" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <StackPane.margin>
+            <Insets left="950.0" />
+         </StackPane.margin>
+      </JFXButton>
+   </children>
+</StackPane>

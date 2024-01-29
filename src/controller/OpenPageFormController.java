@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,15 +18,14 @@ import java.net.URL;
  */
 public class OpenPageFormController {
 
-    public AnchorPane contextId;
+    public StackPane contextID;
 
 
     public void openLoginOnAction(ActionEvent actionEvent) throws IOException {
         URL resource = getClass().getResource("../view/LoginForm.fxml");
         Parent load = FXMLLoader.load(resource);
-        Stage window   = (Stage) contextId.getScene().getWindow();
+        Stage window   = (Stage) contextID.getScene().getWindow();
         window.setScene(new Scene(load));
-        window.setResizable(false);
         window.centerOnScreen();
 
     }
