@@ -3,79 +3,53 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="contextLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="701.0" prefWidth="1204.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
-    <children>
-        <BorderPane prefHeight="701.0" prefWidth="1204.0" style="-fx-background-color: #ecf0f1;" />
-        <Rectangle arcHeight="12.0" arcWidth="12.0" fill="#027c57" height="607.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" StackPane.alignment="CENTER_LEFT">
-            <StackPane.margin>
-                <Insets left="400.0" />
-            </StackPane.margin>
-        </Rectangle>
-        <JFXPasswordField fx:id="passwordContext" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" prefHeight="51.0" prefWidth="943.0" promptText="Password" unFocusColor="BLACK" StackPane.alignment="CENTER">
-            <font>
-                <Font name="System Bold" size="25.0" />
-            </font>
-            <StackPane.margin>
-                <Insets bottom="10.0" left="505.0" top="75.0" />
-            </StackPane.margin>
-            <padding>
-                <Insets right="100.0" />
-            </padding>
-        </JFXPasswordField>
-        <JFXTextField fx:id="userNameContext" focusColor="BLACK" labelFloat="true" onAction="#goToPasswordOnAction" prefHeight="54.0" prefWidth="806.0" promptText="UserName" unFocusColor="BLACK" StackPane.alignment="CENTER">
-            <font>
-                <Font name="System Bold" size="25.0" />
-            </font>
-            <StackPane.margin>
-                <Insets bottom="300.0" left="505.0" />
-            </StackPane.margin>
-            <padding>
-                <Insets right="100.0" />
-            </padding>
-        </JFXTextField>
-        <ImageView fitHeight="51.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
-            <image>
-                <Image url="@../assets/img/icons8-customer-64.png" />
-            </image>
-            <StackPane.margin>
-                <Insets bottom="295.0" right="300.0" />
-            </StackPane.margin>
-        </ImageView>
-        <ImageView fitHeight="41.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
-            <image>
-                <Image url="@../assets/img/icons8-password-100.png" />
-            </image>
-            <StackPane.margin>
-                <Insets right="300.0" top="75.0" />
-            </StackPane.margin>
-        </ImageView>
-        <JFXButton buttonType="RAISED" onAction="#openDashBoardForm" prefHeight="54.0" prefWidth="277.0" style="-fx-background-color: #1abc9c; -fx-background-radius: 12;" text="LOGIN" textFill="WHITE" StackPane.alignment="CENTER">
-            <font>
-                <Font name="System Bold" size="16.0" />
-            </font>
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor>
-            <StackPane.margin>
-                <Insets left="400.0" top="350.0" />
-            </StackPane.margin>
-        </JFXButton>
-        <ImageView fitHeight="420.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
-            <image>
-                <Image url="@../assets/img/Logo.png" />
-            </image>
-            <StackPane.margin>
-                <Insets left="50.0" top="200.0" />
-            </StackPane.margin>
-        </ImageView>
-    </children>
-</StackPane>
+<AnchorPane fx:id="contextId" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <Pane layoutY="2.0" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: #FFFAFA;">
+         <children>
+            <Rectangle arcHeight="12.0" arcWidth="12.0" fill="#027c57" height="533.0" layoutX="334.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="13.0" />
+            <JFXPasswordField fx:id="passwordContext" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" layoutX="443.0" layoutY="326.0" prefHeight="54.0" prefWidth="718.0" promptText="Password" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXTextField fx:id="userNameContext" focusColor="BLACK" labelFloat="true" layoutX="443.0" layoutY="169.0" onAction="#goToPasswordOnAction" prefHeight="54.0" prefWidth="718.0" promptText="UserName" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="382.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/img/icons8-customer-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="382.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/img/icons8-password-100.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="664.0" layoutY="443.0" onAction="#openDashBoardForm" prefHeight="54.0" prefWidth="277.0" style="-fx-background-color: #1abc9c; -fx-background-radius: 12;" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="285.0" fitWidth="263.0" layoutX="32.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/img/Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
